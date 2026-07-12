@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <radialGradient id="horizon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3DCCFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#3DCCFF" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="floor"><rect x="0" y="608" width="1440" height="292"/></clipPath>
+  </defs>
+
+  <!-- horizon glow -->
+  <ellipse cx="720" cy="612" rx="560" ry="70" fill="url(#horizon)"/>
+
+  <!-- perspective floor grid -->
+  <g clip-path="url(#floor)" stroke="#3DCCFF" stroke-width="1" fill="none">
+    <g opacity="0.10">
+      <line x1="630" y1="900" x2="720" y2="608"/>
+      <line x1="810" y1="900" x2="720" y2="608"/>
+      <line x1="450" y1="900" x2="720" y2="608"/>
+      <line x1="990" y1="900" x2="720" y2="608"/>
+      <line x1="240" y1="900" x2="720" y2="608"/>
+      <line x1="1200" y1="900" x2="720" y2="608"/>
+      <line x1="0" y1="900" x2="720" y2="608"/>
+      <line x1="1440" y1="900" x2="720" y2="608"/>
+      <line x1="-280" y1="900" x2="720" y2="608"/>
+      <line x1="1720" y1="900" x2="720" y2="608"/>
+      <line x1="-600" y1="900" x2="720" y2="608"/>
+      <line x1="2040" y1="900" x2="720" y2="608"/>
+    </g>
+    <g opacity="0.08">
+      <line x1="0" y1="618" x2="1440" y2="618"/>
+      <line x1="0" y1="630" x2="1440" y2="630"/>
+      <line x1="0" y1="645" x2="1440" y2="645"/>
+      <line x1="0" y1="664" x2="1440" y2="664"/>
+      <line x1="0" y1="688" x2="1440" y2="688"/>
+      <line x1="0" y1="718" x2="1440" y2="718"/>
+      <line x1="0" y1="756" x2="1440" y2="756"/>
+      <line x1="0" y1="804" x2="1440" y2="804"/>
+      <line x1="0" y1="862" x2="1440" y2="862"/>
+    </g>
+  </g>
+
+  <!-- circuit traces, upper left -->
+  <g stroke="#8FA6DB" stroke-width="1.5" fill="none" opacity="0.14">
+    <path d="M0,120 H150 L195,165 H330"/>
+    <path d="M0,210 H100 L140,250 H225"/>
+    <path d="M60,0 V70 L110,120 V190"/>
+  </g>
+  <g fill="#3DCCFF" opacity="0.30">
+    <circle cx="330" cy="165" r="3.5"/>
+    <circle cx="225" cy="250" r="3"/>
+    <circle cx="110" cy="190" r="3"/>
+  </g>
+
+  <!-- circuit traces, upper right (one gold) -->
+  <g stroke="#8FA6DB" stroke-width="1.5" fill="none" opacity="0.14">
+    <path d="M1440,90 H1300 L1255,135 H1130"/>
+    <path d="M1380,0 V60 L1330,110 V175"/>
+  </g>
+  <g stroke="#FEBD3D" stroke-width="1.5" fill="none" opacity="0.16">
+    <path d="M1440,260 H1320 L1280,220 H1180"/>
+  </g>
+  <g fill="#3DCCFF" opacity="0.30">
+    <circle cx="1130" cy="135" r="3.5"/>
+    <circle cx="1330" cy="175" r="3"/>
+  </g>
+  <g fill="#FEBD3D" opacity="0.35">
+    <circle cx="1180" cy="220" r="3"/>
+  </g>
+</svg>

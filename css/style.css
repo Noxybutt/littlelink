@@ -380,3 +380,111 @@ ul li {
 	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
 	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
 }
+
+/* Bio: flag line + quote */
+.bio-flags {
+	margin-bottom: var(--spacing-xs);
+}
+.bio-flags .flag {
+	display: inline-block;
+	height: 1em;
+	width: auto;
+	vertical-align: -0.12em;
+	border-radius: 2px;
+}
+.bio-quote {
+	font-style: italic;
+	opacity: 0.8;
+}
+
+/* ============================================================
+   Kip theme — official palette:
+   #FFFFFF · #D6E0FF · #8FA6DB · #FEBD3D · #3DCCFF
+   ============================================================ */
+
+:root.theme-dark {
+	background-color:#0E1A38;
+}
+:root.theme-dark body {
+	background-color:#0E1A38;
+	background-image:
+		url('../images/bg-circuit.svg'),
+		radial-gradient(ellipse 90% 55% at 50% -12%, rgba(58,98,175,0.55) 0%, rgba(58,98,175,0) 60%),
+		radial-gradient(ellipse 75% 45% at 50% 112%, rgba(61,204,255,0.16) 0%, rgba(61,204,255,0) 60%),
+		linear-gradient(180deg, #15254E 0%, #0E1A38 100%);
+	background-repeat:no-repeat;
+	background-position:center bottom, center top, center bottom, center;
+	background-size:cover, auto, auto, auto;
+	color:#D6E0FF;
+	min-height:100vh;
+}
+
+/* Name: clean white with a soft cyan glow, faint arrow motif behind */
+h1 {
+	position:relative;
+	color:#FFFFFF;
+	text-shadow:0 0 26px rgba(61,204,255,0.40);
+}
+h1::before {
+	content:"";
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-45%) rotate(180deg);
+	width:11rem;
+	height:11rem;
+	background:url('../images/favicon.svg') center/contain no-repeat;
+	opacity:0.13;
+}
+h1 div {
+	position:relative;
+}
+
+/* Avatar: cyan portal ring, like Kip's portals */
+.avatar {
+	box-shadow:0 0 0 3px #3DCCFF, 0 0 30px rgba(61,204,255,0.45);
+}
+
+/* Bio colors */
+.container p.bio-flags {
+	margin-bottom:var(--spacing-xs);
+	color:#D6E0FF;
+	font-weight:600;
+}
+.container p.bio-quote {
+	color:#8FA6DB;
+	opacity:1;
+}
+
+/* Footer */
+footer {
+	color:#8FA6DB;
+}
+:root.theme-dark a:not(.button) {
+	color:#3DCCFF;
+}
+:root.theme-dark a:not(.button):hover {
+	color:#A5E9FF;
+}
+
+/* Kip buttons: periwinkle glass, cyan border, gold glow on hover */
+.button-kip {
+	--button-text:#FFFFFF;
+	--button-background:rgba(143,166,219,0.30);
+	--button-border:1px solid rgba(61,204,255,0.80);
+	box-shadow:0 0 12px rgba(61,204,255,0.12), inset 0 0 18px rgba(214,224,255,0.05);
+	transition:border-color .18s ease, box-shadow .18s ease, transform .12s ease, background-color .18s ease, color .18s ease;
+}
+.button-kip:hover {
+	--button-background:#FEBD3D;
+	--button-text:#0E1A38;
+	border-color:#FFE18C;
+	box-shadow:0 0 24px rgba(254,189,61,0.55), inset 0 0 14px rgba(255,225,140,0.25);
+	transform:translateY(-2px);
+}
+.button-kip .icon {
+	transition:filter .18s ease;
+}
+.button-kip:hover .icon {
+	filter:brightness(0) opacity(0.85);
+}
